@@ -115,7 +115,11 @@ end
 #     3-dimensional array: [[['some data']]]
 def flatten(data)
 
-    return data if data.kind_of?(Array) == false
+    if data.kind_of?(Array) == false
+        ans_arr = []
+        data.each {|ele| ans_arr << ele}
+        ans_arr
+    end
 
     
 
